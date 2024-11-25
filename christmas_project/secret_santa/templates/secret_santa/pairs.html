@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secret Santa Pairs</title>
+</head>
+<body>
+    <h1>Secret Santa Pairs</h1>
+    <ul>
+        {% for giver, receiver in pairs %}
+            <li>{{ giver.name }} → {{ receiver.name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'secret_santa' %}">Back</a>
+</body>
+</html>
